@@ -10,7 +10,7 @@ SYMBOL = "SOLUSDT"  # 수집할 종목 (예: 'SOLUSDT', 'BTCUSDT' 등)
 START_DATE = "2023-07-11"  # 데이터 수집 시작 날짜 (형식: 'YYYY-MM-DD')
 END_DATE = "2024-07-11"  # 데이터 수집 종료 날짜 (형식: 'YYYY-MM-DD')
 TIMEFRAME = "1m"  # 수집할 봉의 종류 (1m, 3m, 5m, 15m, 30m, 1h, 2h, 4h, 6h, 8h, 12h, 1d, 3d, 1w, 1M 중 선택)
-FILE_PATH = "C:/Users/Username/Desktop/solana_data.csv"  # 저장할 파일 경로
+FILE_PATH = "C:/Users/krkr5/OneDrive/바탕 화면/project/Crypto_data/dava_csv/solana_data.csv"  # 저장할 파일 경로
 
 
 def date_to_timestamp(date_str):
@@ -59,7 +59,7 @@ def collect_data(client, symbol, timeframe, start_date, end_date):
             print(f"데이터 수집 실패: {datetime.datetime.fromtimestamp(start_time / 1000)}")
 
         start_time = next_end
-        time.sleep(1)  # API 호출 제한 고려
+        time.sleep(2)  # API 호출 제한 고려
 
     return process_klines(all_data)
 
